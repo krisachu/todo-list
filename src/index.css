@@ -1,0 +1,87 @@
+body {
+  background-color: rgb(136, 124, 248);
+}
+
+h1 {
+  color: rgb(65, 64, 64);
+  margin-left: 120px;
+  padding-top: 30px;
+  font-family: arial;
+}
+
+.App {
+  background-color: white;
+  width: 400px;
+  margin: 40px auto;
+  border-radius: 0px;
+  box-shadow: 5px 10px 25px 10px #484168;
+}
+
+#todo-list-form input {
+  background-color: white;
+  border: 0;
+  width: 200px;
+  height: 50px;
+  padding: 0 20px;
+  margin: 20px;
+  font-size: 17px;
+  border-radius: 2px;
+  color: rgb(65, 64, 64);
+  box-shadow: 1px 1px 5px #b7b7b8;
+}
+
+#todo-list-form input::placeholder {
+  color: rgb(173, 171, 171);
+}
+
+#todo-list-form input:focus {
+  outline: none;
+}
+
+#todo-list-form button {
+  height: 50px;
+  width: 80px;
+  border-radius: 3px;
+  border: 0;
+  background-color: rgb(136, 124, 248);
+  font-size: 17px;
+  color: white;
+}
+
+.testi-css-1 {
+  margin: 10px;
+}
+
+.testi-css-2 {
+  height: 30px;
+  width: 300px;
+  margin: 5px;
+  padding: 10px 5px 10px 15px;
+  font-size: 17px;
+  border: 0;
+  color: rgb(65, 64, 64);
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  color: rgb(168, 167, 167);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  border-top: 1px solid lightgrey;
+}
+
+li:last-child {
+  border-bottom: 1px solid lightgrey;
+}
+
+.todo-items {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
