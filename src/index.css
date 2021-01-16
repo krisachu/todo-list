@@ -31,48 +31,17 @@ h1 {
   
 }
 
-/**
-.add-task-input {
-  width: 200px;
-  height: 34px;
-  margin-left:85px;
-  margin-right: 10px;
-  border-style: solid;
-  border-color: #b9b9b9;
-  border-radius: 3px;
-  border-width: thin;
-}
-
-.task-form input::placeholder {
-  color: rgb(199, 197, 197);
-  font-size: 18px;
-  font-family: Verdana;
-}
-**/
-
-
-
 .tasks {
   display: grid;
 }
-
-
 
 form input:focus {
   outline: none;
 }
 
-
-
-
-
-.testi-css-1 {
-  margin: 10px;
-}
-
-.testi-css-2 {
+.input-form {
   height: 30px;
-  width: 350px;
+  width: 345px;
   margin: 5px;
   padding: 10px 5px 10px 15px;
   font-size: 17px;
@@ -90,17 +59,5 @@ ul {
   margin: 0;
   padding: 0;
 }
-
-/**
-li {
-  border-top: 1px solid lightgrey;
-  border-radius: 5px;
-}
-
-li:last-child {
-  border-bottom: 1px solid lightgrey;
-}
-
-**/
 
 

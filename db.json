@@ -1,19 +1,29 @@
 {
   "tasks": [
     {
-      "content": "Eat chocolate and candy",
-      "done": false,
-      "id": 2
-    },
-    {
       "content": "Take Zara for a walk",
-      "done": false,
+      "done": true,
       "id": 3
     },
     {
-      "content": "Buy sushi, shampoo, bananas and soda",
+      "content": "Buy bananas and chocolate",
+      "done": true,
+      "id": 7
+    },
+    {
+      "content": "Learn Material UI",
       "done": false,
-      "id": 4
+      "id": 10
+    },
+    {
+      "content": "Go to the gym in the evening",
+      "done": false,
+      "id": 11
+    },
+    {
+      "content": "Sing karaoke with friends",
+      "done": false,
+      "id": 12
     }
   ]
 }

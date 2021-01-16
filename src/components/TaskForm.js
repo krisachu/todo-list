@@ -12,13 +12,14 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   addButton: {
-      backgroundColor: '#673ab7', 
+    background: "#673ab7 !important",
+    color: "white",
   },
   form: {
-      margin: 'auto',
-      marginTop: '20px',
-      marginBottom: '20px',
-  }
+    margin: "auto",
+    marginTop: "20px",
+    marginBottom: "20px",
+  },
 }));
 
 const TaskForm = (props) => {
@@ -32,7 +33,11 @@ const TaskForm = (props) => {
         value={props.taskValue}
         onChange={props.onTaskChange}
       />
-      <Fab className={classes.addButton} color="primary" aria-label="add" type="submit">
+      <Fab
+        className={classes.addButton}
+        aria-label="add"
+        type="submit"
+      >
         <AddIcon />
       </Fab>
     </form>

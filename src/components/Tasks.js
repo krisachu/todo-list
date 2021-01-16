@@ -1,4 +1,18 @@
-import React from 'react';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Checkbox from "@material-ui/core/Checkbox";
+import IconButton from "@material-ui/core/IconButton";
+import DeleteIcon from "@material-ui/icons/Delete";
+
+const useStyles = makeStyles((theme) => ({
+  Checkbox: {
+    color: "#4caf50 !important",
+  },
+  IconButton: {
+    color: "#f44336 !important",
+    padding: "0px",
+  },
+}));
 
 // ruksimalla boksia (input onChange) käynnistetään funktio switchStateOfTask,
 // jolle annetaan id (joka tulee ylläolevan mapin kautta)
@@ -7,44 +21,45 @@ import React from 'react';
 // jolloin yliviivataan taski. Jos false, silloin '' (tyhjä)
 
 const Tasks = (props) => {
-    return (
-        <div className="todo-items">
-            <ul>
-                {props.tasks.map((task) => {
-                    return (
-                        <li key={task.id}>
-                            <input
-                                onChange={() =>
-                                    props.switchStateOfTask(task.id)
-                                }
-                                type="checkbox"
-                                className="testi-css-1"
-                                checked={task.done}
-                            />
-                            <input
-                                type="text"
-                                id={task.id}
-                                className={`testi-css-2${
-                                    task.done ? ' strikethrough' : ''
-                                }`}
-                                onFocus={() => props.onEditStart(task.id)}
-                                onChange={event => props.onEditTask(event, task)}
-                                onBlur={() => props.onEditEnd(task.id)}
-                                value={props.editableTask && props.editableTask.id === task.id ? props.editableTask.content : task.content}
-                            />
-                            <button
-                                onClick={() => props.removeTask(task.id)}
-                                type="button"
-                                className="delete-button"
-                            >
-                                X
-                            </button>
-                        </li>
-                    );
-                })}
-            </ul>
-        </div>
-    );
+  const classes = useStyles();
+  return (
+    <div className="todo-items">
+      <ul>
+        {props.tasks.map((task) => {
+          return (
+            <li key={task.id}>
+              <Checkbox
+                className={classes.Checkbox}
+                color="primary"
+                onChange={() => props.switchStateOfTask(task.id)}
+                checked={task.done}
+              />
+              <input
+                type="text"
+                id={task.id}
+                className={`input-form${task.done ? " strikethrough" : ""}`}
+                onFocus={() => props.onEditStart(task.id)}
+                onChange={(event) => props.onEditTask(event, task)}
+                onBlur={() => props.onEditEnd(task.id)}
+                value={
+                  props.editableTask && props.editableTask.id === task.id
+                    ? props.editableTask.content
+                    : task.content
+                }
+              />
+              <IconButton
+                className={classes.IconButton}
+                aria-label="Delete"
+                onClick={() => props.removeTask(task.id)}
+              >
+                <DeleteIcon />
+              </IconButton>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
 };
 
 export default Tasks;
